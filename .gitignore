@@ -1,0 +1,43 @@
+# Virtual environment
+rag_env/
+venv/
+.env/
+.env.bak/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Build or distribution directories
+build/
+dist/
+*.egg-info/
+
+# Environment / config files
+pyvenv.cfg
+
+# Data files (optional)
+# Add these if you have large datasets or text files that shouldn’t be committed
+data/
+*.csv
+*.json
+*.txt
