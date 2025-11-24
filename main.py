@@ -14,7 +14,7 @@ load_dotenv()
 def main():
     # --- Configuration ---
     DATA_DIR = "./data"
-    VECTOR_DB_DIR = "./chroma_db"
+    VECTOR_DB_DIR = "./data/vector_store"
     GROQ_API_KEY = os.getenv("GROQ_API_KEY")
     
     if not GROQ_API_KEY:
@@ -28,8 +28,8 @@ def main():
     vector_store = VectorStoreManager(persist_directory=VECTOR_DB_DIR)
 
     # Optional: Load data if DB is empty
-    # raw_docs = loader.load_documents()
-    # chunks = loader.chunk_documents(raw_docs)
+    raw_docs = loader.load_documents()
+    chunks = loader.chunk_documents(raw_docs)
     if chunks:
         embeddings = embed_manager.generate_embeddings([doc.page_content for doc in chunks])
         vector_store.add_documents(chunks, embeddings)

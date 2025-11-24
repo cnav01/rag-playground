@@ -30,7 +30,7 @@ class RAGPipeline:
         } for doc in results] 
 
         # 3. Prepare Prompt
-        prompt = f"""Use the following context to answer the question in a concise manner in paragraphs:
+        prompt = f"""Use the following context to answer the question in a well structured way with bullet points and paragraphs wherever necessary in a concise manner:
         
         Context:
         {context}

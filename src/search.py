@@ -7,7 +7,7 @@ class Retriever:
         self.vector_store = vector_store
         self.embedding_manager = embedding_manager
 
-    def retrieve(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
+    def retrieve(self, query: str, top_k: int = 5, score_threshold: float = 0.0) -> List[Dict[str, Any]]:
         """Retrieves relevant documents based on the query."""
         
         # 1. Generate embedding for the query
